@@ -1,0 +1,366 @@
+/* Variáveis de Cores */
+:root {
+    --primary-color: #d11212; /* Vermelho vibrante */
+    --secondary-color: #111822; /* Fundo escuro/quase preto */
+    --text-color: #ffffff;
+    --background-dark: #192230; /* Fundo de seção */
+    --bar-color: #23272b; /* Cor da barra de progresso (fundo) */
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* --- Cabeçalho --- */
+header {
+    background-color: rgba(13, 17, 23, 0.9); /* Fundo semi-transparente */
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+.btn-abrir {
+    background-color: #2da44e; /* Botão verde para contraste */
+    color: var(--text-color);
+    padding: 8px 15px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    /* Imagem de Fundo Placeholder */
+    background-image: url('https://via.placeholder.com/1920x1080/0d1117/ffffff?text=Fundo+Oficina+Mecânica'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Escurece a imagem */
+}
+
+.hero-section .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-top: 60px; /* Ajusta por causa do cabeçalho fixo */
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-text .auto-highlight {
+    color: var(--primary-color);
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #c9d1d9;
+}
+
+.hero-actions .btn {
+    margin-right: 15px;
+    font-size: 1rem;
+    padding: 12px 25px;
+}
+
+.deploy {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.repositorio {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--text-color);
+}
+
+/* --- Seção Sobre Nós --- */
+.about-section {
+    padding: 80px 0;
+    background-color: var(--background-dark);
+}
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #c9d1d9;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+
+
+/* --- Seção Tecnologias --- */
+.tech-section {
+    padding: 80px 0;
+    background-color: var(--secondary-color);
+}
+
+.tech-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.tech-section .subtitle {
+    text-align: center;
+    color: #c9d1d9;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.tech-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.tech-column {
+    flex: 1;
+    min-width: 120px;
+}
+
+.tech-item {
+    margin-bottom: 25px;
+}
+
+.tech-name {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.tech-bar {
+    background-color: var(--bar-color);
+    height: 15px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--primary-color);
+    /* Largura das barras (estimativa visual) */
+    width: 65%; /* Exemplo para React, Python, PostgreSQL */
+    border-radius: 5px;
+}
+
+/* --- Seção Tecnologias e Programas --- */
+.tech-section {
+    padding: 80px 0;
+    background-color: var(--secondary-color);
+}
+
+.tech-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.tech-section .subtitle {
+    text-align: center;
+    color: #c9d1d9;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+/* Grade dos cards */
+.tech-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* Cada item (React, Python, etc.) */
+.tech-item {
+    background: linear-gradient(90deg, #d11212, #111822);
+    border-radius: 12px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 15px 25px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Efeito hover */
+.tech-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Layout em 3 colunas para telas grandes */
+@media (min-width: 900px) {
+    .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px 20px;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .tech-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* --- Responsividade Básica --- */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        order: -1; /* Move a imagem para cima no mobile */
+        margin-bottom: 20px;
+    }
+
+    .tech-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        display: none; /* Simplifica a navegação para mobile */
+    }
+
+    header .container {
+        justify-content: center;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+    
+    /* Para o exemplo, vamos simplificar o cabeçalho no mobile */
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    nav a, .btn-abrir {
+        margin: 5px 10px;
+    }
+}
