@@ -6,6 +6,7 @@
     <title>SpeedAuto - Gestão na velocidade do seu negócio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
@@ -34,27 +35,19 @@
             </div>
         </div>
     </div>
-</section>
-
-<script>
-    const buttons = document.querySelectorAll('.hero-actions button');
-
-    buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const link = btn.getAttribute('data-link');
-            window.open(link, '_blank'); // abre em nova aba
-        });
-    });
-</script>
-
-</div>
-
-            </div>
-            <div class="hero-image">
-                </div>
-        </div>
     </section>
 
+    <script>
+        const buttons = document.querySelectorAll('.hero-actions button');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const link = btn.getAttribute('data-link');
+                window.open(link, '_blank'); // abre em nova aba
+            });
+        });
+    </script>
+    
     <section class="about-section" id="sobre">
         <div class="container">
             <div class="about-content">
@@ -72,210 +65,218 @@ Speed Auto: onde sua gestão ganha velocidade, precisão e resultado.</p>
         </div>
     </section>
 
-    <section class="tech-section">
-  <div class="container"><h2 class="section-title">
-    <span class="highlight">Tecnologias</span> e Programas</h2>
-</h2>
-    <p class="subtitle">Tecnologias, frameworks e ferramentas que utilizamos dentro do nosso projeto.</p>
+    <section class="tech-section" id="tecnologias">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="highlight">Tecnologias</span> e Programas
+            </h2>
+            <p class="subtitle">Tecnologias, frameworks e ferramentas que utilizamos dentro do nosso projeto.</p>
 
-    <div class="tech-grid">
-      <div class="tech-item">Git e Github</div>
-      <div class="tech-item">Tailwind</div>
-      <div class="tech-item">React</div>
-      <div class="tech-item">Python</div>
-      <div class="tech-item">Figma</div>
-      <div class="tech-item">PostgreSQL</div>
-      <div class="tech-item">HTML</div>
-      <div class="tech-item">CSS</div>
-      <div class="tech-item">Node</div>
-      <div class="tech-item">Trello</div>
-      <div class="tech-item">typescript</div>
-
-      </div>
-    </div>
-  </div>
-</section>
+            <div class="tech-grid">
+                <div class="tech-item">Git e Github</div>
+                <div class="tech-item">Tailwind</div>
+                <div class="tech-item">React</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">Figma</div>
+                <div class="tech-item">PostgreSQL</div>
+                <div class="tech-item">HTML</div>
+                <div class="tech-item">CSS</div>
+                <div class="tech-item">Node</div>
+                <div class="tech-item">Trello</div>
+                <div class="tech-item">typescript</div>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        </footer>
-        <section class="funcionalidades-section">
-    <div class="container">
-        
-        <h2 class="section-title">
-    <span class="highlight">Funcionalidades</span>
-</h2>
+    </footer>
+    
+    <section class="funcionalidades-section" id="funcionalidades">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="highlight">Funcionalidades</span>
+            </h2>
 
-        <p class="section-subtitle">
-            Explore as funcionalidades do SpeedAuto e veja, por meio de prints do sistema, 
-            como ele organiza, simplifica e facilita a gestão de forma prática e intuitiva.
+            <p class="section-subtitle">
+                Explore as funcionalidades do SpeedAuto e veja, por meio de prints do sistema, 
+                como ele organiza, simplifica e facilita a gestão de forma prática e intuitiva.
+            </p>
+
+            <div class="cards-grid">
+                
+                <div class="feature-card highlighted-card">
+                    <div class="card-image-placeholder">
+                        <img src="dashboard.svg" alt="Print da funcionalidade Dashboard">
+                    </div>
+                    <div class="card-content">
+                        <h3>Dashboard</h3>
+                        <p>tenha uma visão completa do seu negócio em tempo real, acompanhando vendas do mês, veículos em estoque, leads ativos e desativados, novos clientes, atividades recentes e o status dos veículos tudo organizado para você tomar decisões rápidas e estratégicas<p>
+                    </div>
+                </div>
+
+                <div class="feature-card highlighted-card">
+                    <div class="card-image-placeholder">
+                        <img src="estoque.svg" alt="Print da funcionalidade Estoque de veiculos">
+                    </div>
+                    <div class="card-content">
+                        <h3>Estoque de veiculos</h3>
+                        <p>gerencie seu inventário de forma prática e eficiente, com opções de cadastro, atualização e exclusão de veículos, filtros avançados por modelo, placa e outros critérios, além de consultar rapidamente a disponibilidade de cada veículo.<p>
+                    </div>
+                </div>
+
+                <div class="feature-card highlighted-card">
+                    <div class="card-image-placeholder">
+                        <img src="relatorios.svg" alt="Print da funcionalidade Relatorios e Analises">
+                    </div>
+                    <div class="card-content">
+                        <h3>Relatorios e Analises</h3>
+                        <p> transforme dados em decisões estratégicas com gráficos e relatórios detalhados, exportáveis em CSV. Acompanhe métricas de vendas, faturamento, ticket médio, novos clientes e taxa de vendas, e gere relatórios específicos de veículos, clientes, vendas ou um relatório geral consolidado, garantindo uma visão completa do negócio</p>
+                    </div>
+                </div>
+
+                <div class="feature-card highlighted-card">
+                    <div class="card-image-placeholder">
+                        <img src="financiamento.svg" alt="Print da funcionalidade Simulador de Financiamento Veicular">
+                    </div>
+                    <div class="card-content">
+                        <h3>Simulador de Financiamento Veicular</h3>
+                        <p>calcule parcelas, entrada ideal e compare os sistemas Price e SAC para carros, motos e utilitários, oferecendo simulações precisas que ajudam seus clientes a planejar o financiamento de forma prática e segura.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card highlighted-card">
+                    <div class="card-image-placeholder">
+                        <img src="clientes.svg" alt="Print da funcionalidade Gestão de cliente">
+                    </div>
+                    <div class="card-content">
+                        <h3>Gestão de cliente</h3>
+                        <p>organize e controle todos os clientes e leads cadastrados, incluindo nome, telefone, e-mail e status (ativo, novo ou inativo), facilitando o acompanhamento de oportunidades e fortalecendo o relacionamento com cada cliente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="colaboradores-section" id="colaboradores">
+    <div class="container"> 
+        <h2 class="titulo-colaboradores">Colabo<span>radores</span></h2>
+
+        <p class="descricao">
+            Criado por cinco desenvolvedores, este projeto une conhecimentos de lógica de programação, web e back-end adquiridos em sua jornada de estudos.
         </p>
 
-        <div class="cards-grid">
+        <div class="cards-container">
+
+            <div class="card">
+                <div class="perfil">
+                    <img src="vitor.jpeg" alt="Foto de Vitor" class="perfil-img"> 
+                </div>
+                <h3 class="nome">Vitor</h3>
+                <p class="cargo">Desenvolvedor Full-Stack</p>
+                
+                <div class="links-sociais">
+                    <a data-link="https://github.com/vt-debug"
+                        onclick="window.open(this.dataset.link, '_blank')"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a data-link="https://www.linkedin.com/in/vitor-alexandre-356aa42a7"
+                        onclick="window.open(this.dataset.link, '_blank')"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="perfil">
+                    <img src="lucas.jpeg" alt="Foto de Lucas" class="perfil-img">
+                </div>
+                <h3 class="nome">Lucas</h3>
+                <p class="cargo">Desenvolvedor Full-Stack</p>
+
+                <div class="links-sociais">
+                    <a data-link="https://github.com/lukinhasc-dev"
+                        onclick="window.open(this.dataset.link, '_blank')"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a data-link="https://www.linkedin.com/in/lukinhasclessa/"
+                        onclick="window.open(this.dataset.link, '_blank')"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="perfil">
+                    <img src="flavio.jpeg" alt="Foto de Flavio" class="perfil-img">
+                </div>
+                <h3 class="nome">Flávio</h3>
+                <p class="cargo">AI - Developer</p>
+
+                <div class="links-sociais">
+                    <a data-link="https://github.com/FhVieira13"
+                        onclick="window.open(this.dataset.link, '_blank')"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a data-link="https://www.linkedin.com/in/flavio-henrique-984951223/"
+                        onclick="window.open(this.dataset.link, '_blank')"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
             
-            <div class="feature-card highlighted-card">
-                <div class="card-image-placeholder">
-                    <img src="dashboard.svg" alt="Print da funcionalidade Sistema de Carros">
+            <div class="card">
+                <div class="perfil">
+                    <img src="debora.jpeg" alt="Foto de Débora" class="perfil-img">
                 </div>
-                <div class="card-content">
-                    <h3>Dashboard</h3>
-                    <p>tenha uma visão completa do seu negócio em tempo real, acompanhando vendas do mês, veículos em estoque, leads ativos e desativados, novos clientes, atividades recentes e o status dos veículos tudo organizado para você tomar decisões rápidas e estratégicas<p>
+                <h3 class="nome">Débora</h3>
+                <p class="cargo">Desenvolvedora Front-End</p>
+
+                <div class="links-sociais">
+                    <a data-link="https://github.com/Dehhminiqz"
+                        onclick="window.open(this.dataset.link, '_blank')"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a data-link="https://www.linkedin.com/in/debora-gon%C3%A7alves-de-oliveira-bb0501287/"
+                        onclick="window.open(this.dataset.link, '_blank')"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="feature-card highlighted-card">
-                <div class="card-image-placeholder">
-                    <img src="estoque.svg" alt="Print da funcionalidade Sistema de Carros">
+            <div class="card">
+                <div class="perfil">
+                    <img src="gabriel.png" alt="Foto de Gabriel" class="perfil-img">
                 </div>
-                <div class="card-content">
-                    <h3>Estoque de veiculos</h3>
-                    <p>gerencie seu inventário de forma prática e eficiente, com opções de cadastro, atualização e exclusão de veículos, filtros avançados por modelo, placa e outros critérios, além de consultar rapidamente a disponibilidade de cada veículo.<p>
+                <h3 class="nome">Gabriel</h3>
+                <p class="cargo">AI - Developer</p>
+
+                <div class="links-sociais">
+                    <a data-link="https://github.com/Gabriel-Augusto05"
+                        onclick="window.open(this.dataset.link, '_blank')"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a data-link="https://www.linkedin.com/in/augusto1605/"
+                        onclick="window.open(this.dataset.link, '_blank')"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="feature-card highlighted-card">
-                <div class="card-image-placeholder">
-                    <img src="relatorios.svg" alt="Print da funcionalidade Sistema de Carros">
-                </div>
-                <div class="card-content">
-                    <h3>Relatorios e Analises</h3>
-                    <p> transforme dados em decisões estratégicas com gráficos e relatórios detalhados, exportáveis em CSV. Acompanhe métricas de vendas, faturamento, ticket médio, novos clientes e taxa de vendas, e gere relatórios específicos de veículos, clientes, vendas ou um relatório geral consolidado, garantindo uma visão completa do negócio</p>
-                </div>
-            </div>
-
-            <div class="feature-card highlighted-card">
-                <div class="card-image-placeholder">
-                    <img src="financiamento.svg" alt="Print da funcionalidade Sistema de Carros">
-                </div>
-                <div class="card-content">
-                    <h3>Simulador de Financiamento Veicular</h3>
-                    <p>calcule parcelas, entrada ideal e compare os sistemas Price e SAC para carros, motos e utilitários, oferecendo simulações precisas que ajudam seus clientes a planejar o financiamento de forma prática e segura.</p>
-                </div>
-            </div>
-
-            <div class="feature-card highlighted-card">
-                <div class="card-image-placeholder">
-                    <img src="clientes.svg" alt="Print da funcionalidade Sistema de Carros">
-                </div>
-                <div class="card-content">
-                    <h3>Gestão de cliente</h3>
-                    <p>organize e controle todos os clientes e leads cadastrados, incluindo nome, telefone, e-mail e status (ativo, novo ou inativo), facilitando o acompanhamento de oportunidades e fortalecendo o relacionamento com cada cliente.</p>
-                </div>
-            </div>
         </div>
     </div>
 </section>
-<section class="colaboradores-section">
-
-    <h2 class="titulo-colaboradores">Colabo<span>radores</span></h2>
-
-    <p class="descricao">
-        Criado por cinco desenvolvedores, este projeto une conhecimentos de lógica de programação, web e back-end adquiridos em sua jornada de estudos.
-    </p>
-
-    
-    <div class="cards-container">
-
-        <div class="card">
-            <img src="vitor.jpeg" alt="Foto de Vitor">
-            <h3 class="nome">Vitor</h3>
-            <p class="cargo">Desenvolvedor Full-Stack</p>
-            
-            <div class="links-sociais">
-                <a data-link="https://github.com/vt-debug"
-                   onclick="window.open(this.dataset.link, '_blank')"
-                   rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                </a>
-
-                <a data-link="https://linkedin.com/in/vitor"
-                   onclick="window.open(this.dataset.link, '_blank')"
-                   rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="" alt="Foto de Lucas">
-            <h3 class="nome">Lucas</h3>
-            <p class="cargo">Desenvolvedor Full-Stack</p>
-
-            <div class="links-sociais">
-                <a data-link="https://github.com/"
-                   onclick="window.open(this.dataset.link, '_blank')"
-                   rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                </a>
-
-                <a data-link="https://linkedin.com/"
-                   onclick="window.open(this.dataset.link, '_blank')"
-                   rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="" alt="Foto de Flavio">
-            <h3 class="nome">Flávio</h3>
-            <p class="cargo">AI - Developer</p>
-
-            <div class="links-sociais">
-                <a data-link="https://github.com/"
-                   onclick="window.open(this.dataset.link, '_blank')"
-                   rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                </a>
-
-                <a data-link="https://linkedin.com/"
-                   onclick="window.open(this.dataset.link, '_blank')"
-                   rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-        </div>
-
-    </div>
-<div class="cards-container linha-3">
-
-    <div class="card">
-        <img src="debora.jpeg" alt="">
-        <h3 class="nome">Débora</h3>
-        <p class="cargo">Desenvolvedora Front-End</p>
-
-        <div class="links-sociais">
-            <a data-link="https://github.com/"
-               onclick="window.open(this.dataset.link, '_blank')"
-               rel="noopener noreferrer">
-                <i class="fab fa-github"></i>
-            </a>
-
-            <a data-link="https://linkedin.com/"
-               onclick="window.open(this.dataset.link, '_blank')"
-               rel="noopener noreferrer">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="" alt="">
-        <h3 class="nome">Gabriel</h3>
-        <p class="cargo">AI - Developer</p>
-
-        <div class="links-sociais">
-            <a data-link="https://github.com/"
-               onclick="window.open(this.dataset.link, '_blank')"
-               rel="noopener noreferrer">
-                <i class="fab fa-github"></i>
-            </a>
-
-            <a data-link="https://linkedin.com/"
-               onclick="window.open(this.dataset.link, '_blank')"
-               rel="noopener noreferrer">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-    </div>
-
-</div>
