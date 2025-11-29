@@ -378,7 +378,7 @@ nav a:hover {
 }
 
 .highlight {
-    background: linear-gradient(90deg, #ba2828, #820e0e, #460909);
+    background: linear-gradient(90deg, #b77979, #851b1b, #3f0707);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -505,7 +505,7 @@ nav a:hover {
     text-align: left;
     margin-bottom: 10px;
     
-    background: linear-gradient(90deg,#f2eeee, #820e0e, #460909); 
+    background: linear-gradient(90deg, #b77979, #851b1b, #3f0707); 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
     background-clip: text;
