@@ -91,7 +91,7 @@ nav a:hover {
     justify-content: center;
     text-align: left;
     /* Imagem de Fundo Placeholder */
-    background-image: url('/trabalho/img/fundo\ css.jpeg'); 
+    background-image: url('/img/fundo\ css.jpeg'); 
     background-size: cover;
     background-position: center;
 }
