@@ -1,13 +1,12 @@
 /* Variáveis de Cores */
 :root {
     --primary-color: #d11212; /* Vermelho vibrante */
-    --secondary-color: #111822; /* Fundo escuro/quase preto */
+    --secondary-color: #121f37; /* Fundo escuro/quase preto */
     --text-color: #ffffff;
     --background-dark: #192230; /* Fundo de seção */
     --bar-color: #23272b; /* Cor da barra de progresso (fundo) */
 }
 
-/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
@@ -92,7 +91,7 @@ nav a:hover {
     justify-content: center;
     text-align: left;
     /* Imagem de Fundo Placeholder */
-    background-image: url('https://via.placeholder.com/1920x1080/0d1117/ffffff?text=Fundo+Oficina+Mecânica'); 
+    background-image: url('fundo\ css.jpeg'); 
     background-size: cover;
     background-position: center;
 }
@@ -114,6 +113,7 @@ nav a:hover {
     justify-content: center;
     height: 100%;
     padding-top: 60px; /* Ajusta por causa do cabeçalho fixo */
+    
 }
 
 .hero-text {
@@ -153,7 +153,6 @@ nav a:hover {
     color: var(--text-color);
 }
 
-/* --- Seção Sobre Nós --- */
 .about-section {
     padding: 80px 0;
     background-color: var(--background-dark);
@@ -191,10 +190,6 @@ nav a:hover {
     border-radius: 8px;
     object-fit: cover;
 }
-
-
-
-/* --- Seção Tecnologias --- */
 .tech-section {
     padding: 80px 0;
     background-color: var(--secondary-color);
@@ -213,67 +208,6 @@ nav a:hover {
     font-size: 1.1rem;
 }
 
-.tech-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.tech-column {
-    flex: 1;
-    min-width: 120px;
-}
-
-.tech-item {
-    margin-bottom: 25px;
-}
-
-.tech-name {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 700;
-}
-
-.tech-bar {
-    background-color: var(--bar-color);
-    height: 15px;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-}
-
-.tech-bar::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: var(--primary-color);
-    /* Largura das barras (estimativa visual) */
-    width: 65%; /* Exemplo para React, Python, PostgreSQL */
-    border-radius: 5px;
-}
-
-/* --- Seção Tecnologias e Programas --- */
-.tech-section {
-    padding: 80px 0;
-    background-color: var(--secondary-color);
-}
-
-.tech-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.tech-section .subtitle {
-    text-align: center;
-    color: #c9d1d9;
-    margin-bottom: 50px;
-    font-size: 1.1rem;
-}
-
-/* Grade dos cards */
 .tech-grid {
     display: flex;
     justify-content: center;
@@ -281,86 +215,415 @@ nav a:hover {
     gap: 25px;
 }
 
-/* Cada item (React, Python, etc.) */
 .tech-item {
-    background: linear-gradient(90deg, #d11212, #111822);
+    background: linear-gradient(90deg, #d11212, #111927);
     border-radius: 12px;
     color: #ffffff;
     font-weight: bold;
-    font-size: 1rem;
-    padding: 15px 25px;
+    font-size: 1.1rem;
+    padding: 20px 30px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-/* Efeito hover */
 .tech-item:hover {
     transform: translateY(-6px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Layout em 3 colunas para telas grandes */
 @media (min-width: 900px) {
     .tech-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px 20px;
+        gap: 20px;
     }
 }
-
-/* Responsividade */
 @media (max-width: 768px) {
     .tech-grid {
         grid-template-columns: 1fr 1fr;
     }
 }
+/* Variável de Cores (Apenas para referência, o código principal usará as variáveis existentes) */
+:root {
+    --primary-color:#d11212; /* Vermelho vibrante */
+    --secondary-color: #0b182e; /* Fundo escuro/quase preto */
+    --text-color: #ffffff;
+    --background-dark: #0f1e35; 
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.highlight {
+    background: linear-gradient(90deg, #f2eeee, #820e0e, #460909);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+.funcionalidades-section {
+    padding: 80px 0;
+    background-color: var(--background-dark, #192230); 
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: left; 
+    color: inherit; 
+}
+
+.section-subtitle {
+    text-align: left; 
+    color: #c9d1d9;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+    max-width: 700px; 
+}
 
 
-/* --- Responsividade Básica --- */
-@media (max-width: 768px) {
-    .hero-text h1 {
-        font-size: 3rem;
+
+.cards-grid {
+    display: grid;
+    
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: var(--secondary-color, #111822);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse */
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.highlighted-card {
+    border: 2px solid var(--primary-color, #d11212);
+}
+
+/* Área da Imagem */
+.card-image-placeholder {
+    width: 100%;
+    height: 180px; 
+    background-color: #0d121c; 
+    border-bottom: 1px solid #333; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    color: var(--text-color, #ffffff);
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #c9d1d9;
+}
+
+@media (max-width: 900px) {
+    .cards-grid {
+        
+        grid-template-columns: repeat(2, 1fr); 
     }
+}
 
-    .hero-text p {
-        font-size: 1.2rem;
+@media (max-width: 500px) {
+    .cards-grid {
+        
+        grid-template-columns: 1fr; 
     }
-
-    .about-content {
-        flex-direction: column;
+    .section-title, .section-subtitle {
         text-align: center;
     }
+}
+.colaboradores-section {
+    max-width: 1000px;
+    width: 100%;
+    margin: 60px auto; 
+    padding: 0 20px;
+    box-sizing: border-box;
+    background: transparent; 
+    color: #FFFFFF; 
+    font-family: Arial, sans-serif;
+}
 
-    .about-image {
-        order: -1; /* Move a imagem para cima no mobile */
-        margin-bottom: 20px;
-    }
+.titulo-colaboradores {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: left; 
+    margin-bottom: 10px;
 
-    .tech-grid {
-        flex-direction: column;
+    background-image: linear-gradient(to right, #a71a28, #ba3f3f); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+    color: transparent; 
+}
+
+
+.descricao {
+    max-width: 700px;
+    margin: 0 auto 40px 0; 
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #C5C5C5; 
+    text-align: left;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.card {
+    background-color: #1A1738; /* Fundo do card escuro */
+    width: 200px; /* Largura ajustada */
+    padding: 15px; /* Padding ajustado */
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    
+    border: 3px solid transparent; 
+    border-image: linear-gradient(to right, #45247e, #1c184a); 
+    border-image-slice: 1; 
+    transition: transform .2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.perfil {
+    width: 100%;
+    height: 180px; 
+    background: #000; 
+    border-radius: 5px; 
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.perfil-img { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nome {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #FFFFFF; 
+}
+
+.cargo {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #C5C5C5; 
+}
+
+.links-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.links-sociais a {
+    font-size: 1.5em; 
+    color: #C5C5C5; 
+    transition: color .2s ease, transform .2s ease;
+}
+
+.links-sociais a:hover {
+    color: #FF4D97; 
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .cards-container {
         gap: 20px;
     }
 
-    nav {
-        display: none; /* Simplifica a navegação para mobile */
+    .card {
+        width: 45%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 85%;
+        max-width: 300px;
+    }
+    .titulo-colaboradores, .descricao {
+        text-align: center;
+    }
+    .descricao {
+        margin: 0 auto 40px auto;
+    }
+}
+.colaboradores-section {
+    max-width: 1000px;
+    width: 100%;
+    margin: 60px auto; 
+    padding: 0 20px;
+    box-sizing: border-box;
+    background: transparent; 
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+}
+
+.titulo-colaboradores {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 10px;
+    
+    background-image: linear-gradient(to right, #ae3333, #651d1d); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+    color: transparent; 
+}
+
+.descricao {
+    max-width: 700px;
+    margin: 0 auto 40px 0; 
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #C5C5C5;
+    text-align: left;
+}
+
+/* --- */
+
+/* ====== CONTAINER DOS CARDS ====== */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.card {
+    background-color: #1A1738; /* Fundo do card escuro */
+    width: 450px; 
+    padding: 6p5px; 
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    
+    border: 3px solid transparent; 
+    border-image: linear-gradient(to right, #FF4D97, #4E40F8); 
+    border-image-slice: 1; 
+    transition: transform .2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.perfil {
+    width: 100%;
+    height: 350px; 
+    background: #000; 
+    border-radius: 5px; 
+    margin-bottom: 20px; 
+    overflow: hidden;
+}
+
+.perfil-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- */
+
+/* ====== TEXTOS ====== */
+.nome {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+}
+
+.cargo {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #C5C5C5;
+}
+
+.links-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.links-sociais a {
+    font-size: 1.5em;
+    color: #C5C5C5;
+    transition: color .2s ease, transform .2s ease;
+}
+
+.links-sociais a:hover {
+    color: #FF4D97;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        gap: 20px;
     }
 
-    header .container {
-        justify-content: center;
-    }
-
-    .logo {
-        margin-right: 0;
+    .card {
+        width: 45%; 
+        max-width: 250px;
+        padding: 15px; 
     }
     
-    /* Para o exemplo, vamos simplificar o cabeçalho no mobile */
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 10px;
+    .perfil {
+        height: 180px; 
+        margin-bottom: 15px;
     }
-    nav a, .btn-abrir {
-        margin: 5px 10px;
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 85%;
+        max-width: 300px;
+    }
+    .titulo-colaboradores, .descricao {
+        text-align: center;
+    }
+    .descricao {
+        margin: 0 auto 40px auto;
     }
 }
